@@ -11,7 +11,7 @@ cmd({
     filename: __filename,
 },
 async (conn, mek, m, { from, reply }) => {
-    const githubRepoURL = 'https://github.com/waqa827/E3_HACKER-MD';
+    const githubRepoURL = 'https://github.com/ALUSTADYT/E3_HACKER_MD';
 
     try {
         const [, username, repoName] = githubRepoURL.match(/github\.com\/([^/]+)\/([^/]+)/);
@@ -188,7 +188,7 @@ ${repoData.description || 'No description provided'}
 
         // Send audio
         await conn.sendMessage(from, {
-            audio: { url: 'https://files.catbox.moe/vux548.mp4' },
+            audio: { url: 'https://files.catbox.moe/o30inw.mp4' },
             mimetype: 'audio/mp4',
             ptt: true,
             contextInfo: { 

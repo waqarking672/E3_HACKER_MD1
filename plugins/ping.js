@@ -42,7 +42,7 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363318478753709@newsletter',
-                    newsletterName: "E3_HACKER-MD",
+                    newsletterName: "E3_HACKER_MD",
                     serverMessageId: 143
                 }
             }
@@ -69,9 +69,30 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const message = await conn.sendMessage(from, { text: '*PINGING...*' })
         const endTime = Date.now()
         const ping = endTime - startTime
-        await conn.sendMessage(from, { text: `*🔥 E3_HACKER-MD SPEED : ${ping}ms*` }, { quoted: message })
+        await conn.sendMessage(from, { text: `*🔥 E3_HACKER_MD SPEED : ${ping}ms*` }, { quoted: message })
     } catch (e) {
         console.log(e)
         reply(`${e}`)
     }
-})
+}
+            }
+        }, { quoted: mek });
+
+        // Send audio
+        await conn.sendMessage(from, {
+            audio: { url: 'https://files.catbox.moe/vux548.mp4' },
+            mimetype: 'audio/mp4',
+            ptt: true,
+            contextInfo: { 
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true
+            }
+        }, { quoted: mek });
+
+    } catch (error) {
+        console.error("Repo command error:", error);
+        reply(`❌ Error: ${error.message}`);
+    }
+});
+

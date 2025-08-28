@@ -362,7 +362,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         // Send audio
         await conn.sendMessage(from, {
-            audio: { url: 'https://github.com/waqa827/E3_HACKER-MD/blob/main/assets/menu.mp3' },
+            audio: { url: 'https://files.catbox.moe/ayt54o.mp4' },
             mimetype: 'audio/mp4',
             ptt: true
         }, { quoted: mek });

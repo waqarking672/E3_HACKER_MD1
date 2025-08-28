@@ -75,24 +75,4 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         reply(`${e}`)
     }
 })
-                }
-            }
-        }, { quoted: mek });
 
-        // Send audio
-        await conn.sendMessage(from, {
-            audio: { url: 'https://files.catbox.moe/vux548.mp4' },
-            mimetype: 'audio/mp4',
-            ptt: true,
-            contextInfo: { 
-                mentionedJid: [m.sender],
-                forwardingScore: 999,
-                isForwarded: true
-            }
-        }, { quoted: mek });
-
-    } catch (error) {
-        console.error("Repo command error:", error);
-        reply(`❌ Error: ${error.message}`);
-    }
-});

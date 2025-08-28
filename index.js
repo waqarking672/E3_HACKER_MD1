@@ -121,7 +121,7 @@ const port = process.env.PORT || 9090;
   console.log('Bot connected to whatsapp ✅')
   
   let up = `*Hello there E3_HACKER_MD User! \ud83d\udc4b\ud83c\udffb* \n\n> Simple , Straight Forward But Loaded With Features \ud83c\udf8a, Meet E3_HACKER_MD WhatsApp Bot.\n\n *Thanks for using E3_HACKER_MD \ud83d\udea9* \n\n> Join WhatsApp Channel :- ⤵️\n \nhttps://whatsapp.com/channel/0029VarfjW04tRrmwfb8x306 \n\n- *YOUR PREFIX:* = ${prefix}\n\nDont forget to give star to repo ⬇️\n\nhttps://github.com/waqa827/E3_HACKER_MD\n\n> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ E3_HACKER_MD Official 🫰 \ud83d\udda4`;
-    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/p4yxcn.png` }, caption: up })
+    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/iyudhj.jpg` }, caption: up })
   }
   })
   conn.ev.on('creds.update', saveCreds)
